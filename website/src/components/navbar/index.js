@@ -1,36 +1,18 @@
-import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './navbarstyle'
+import {IconContainer, Nav, NavbarContainer, NavLogo,UserIcon, ShoppingCartIcon} from './navbarstyle.js'
+
 const index = () => {
   return (
-    <Nav>
-        <Bars />
-  
-        <NavMenu>
-          <NavLink to='/about' activeStyle>
-            About
-          </NavLink>
-          <NavLink to='/events' activeStyle>
-            Events
-          </NavLink>
-          <NavLink to='/annual' activeStyle>
-            Annual Report
-          </NavLink>
-          <NavLink to='/team' activeStyle>
-            Teams
-          </NavLink>
-          <NavLink to='/blogs' activeStyle>
-            Blogs
-          </NavLink>
-          <NavLink to='/sign-up' activeStyle>
-            Sign Up
-          </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
-        </NavMenu>
-        <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-        </NavBtn>
+    <>
+      <Nav>
+        <NavbarContainer>
+          <NavLogo>ELIT</NavLogo>
+          <IconContainer>
+            <UserIcon/>
+            <ShoppingCartIcon/>
+          </IconContainer>
+        </NavbarContainer>
       </Nav>
-
+    </>
   )
 }
 
