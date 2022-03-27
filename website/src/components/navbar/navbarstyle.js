@@ -11,7 +11,7 @@ export const UserIcon = styled(FaUserAlt)`
   font-size: 1.5rem;
   cursor: pointer;
   outline: none;
-`
+`;
 export const ShoppingCartIcon = styled(FaShoppingCart)`
   position: relative;
   background: transparent;
@@ -19,10 +19,10 @@ export const ShoppingCartIcon = styled(FaShoppingCart)`
   right: .5rem;
   cursor: pointer;
   outline: none;
-`
+`;
 
 export const Nav = styled.nav`
-  background: rgba(0,0,0,.01);
+  background: rgba(0,0,0,.0);
   height: 80px;
   /* margin-top: -80px; */
   display: flex;
@@ -51,7 +51,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled.a`
-  color: red;
+  color: black;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -67,4 +67,4 @@ export const IconContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   display: flex;
-`
+`;
