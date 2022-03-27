@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import { IoIosArrowForward } from "react-icons/io";
 
  const AccordionContainer = styled.div`
     margin-left: 2rem;
@@ -36,7 +37,7 @@ import React from "react";
 `;
 
  const HeaderIcon = styled.span`
-    transform: rotate(${props => props.isActive ? -180 : 0}deg);
+    transform: rotate(${props => props.isActive ? 90 : 0}deg);
     transition: all 0.3s;
 `;
 
@@ -56,7 +57,7 @@ const AccordionContent = ({onClick, itemName, itemContent, isActive}) => {
             <Header onClick={onClick}>
                 {itemName}
                 <HeaderIcon isActive={isActive}>
-                    -
+                    <IoIosArrowForward/>
                 </HeaderIcon>
             </Header>
             <Content itemName={itemName} isActive={isActive}>
