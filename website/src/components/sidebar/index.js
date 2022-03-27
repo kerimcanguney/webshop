@@ -1,9 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react';
+import { AccordionContainer, AccordionContent } from './sidebarstyled';
+const Accordion = ({items}) =>{
+  const [active, setActive] = useState();
 
-const index = () => {
-  return (
-    <div>index</div>
-  )
-}
+  const handleClick = (name)=>{
+    setActive(name === active ? null : name);
+  }
 
-export default index
+  return <AccordionContainer>
+    {items.map(item=>{
+      let isActive = active === item.name;
+      return <AccordionContent onClick={() =>handleClick(item.name)}
+      itemName={item.name} itemContent={item.content} isActive={isActive} />
+    })}
+  </AccordionContainer>
+};
+
+export default Accordion;

@@ -10,7 +10,6 @@ import React from "react";
     color: black;
 `;
 
-
  const Inner = styled.div`
     position: absolute;
     padding: 1rem;
