@@ -3,17 +3,22 @@ import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
  const AccordionContainer = styled.div`
-    margin-left: 2rem;
     overflow: hidden;
     width: 10.75rem;
     border-radius: 0.5rem;
     background-color: white;
     color: black;
+    display: grid;
+    margin-left: 24px;
+    align-items: center;
 `;
 
  const Inner = styled.div`
     position: absolute;
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 5px;
+    vertical-align: text-bottom;
+
     color: black;
 
 `;

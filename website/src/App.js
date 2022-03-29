@@ -8,12 +8,14 @@ import {
 import './app.css'
 import Accordion from './components/sidebar/index';
 import {items} from './components/sidebar/data'
-
+import {Container} from './components/homestyle'
 function App() {
   return (
     <BrowserRouter>
       <Navbar/>
-      <Accordion items={items} />
+      <Container>
+        <Accordion items={items} />
+      </Container>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

@@ -5,7 +5,7 @@ const index = () => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo>ELIT</NavLogo>
+          <NavLogo>SneakerStock</NavLogo>
           <IconContainer>
             <UserIcon/>
             <ShoppingCartIcon/>
