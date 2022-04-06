@@ -1,9 +1,12 @@
 import React from 'react'
-
-const ItemOverview = () => {
+import { Container, Card } from './overviewstyle'
+const ItemContainer = () => {
   return (
-    <div>index</div>
+    <Container>
+      <Card></Card>
+      <Card></Card>
+    </Container>
   )
 }
 
-export default ItemOverview
+export default ItemContainer

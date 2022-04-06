@@ -4,12 +4,11 @@ import { IoIosArrowForward } from "react-icons/io";
 
  const AccordionContainer = styled.div`
     overflow: hidden;
-    width: 10.75rem;
-    border-radius: 0.5rem;
+    width: 200px;
     background-color: white;
     color: black;
     display: grid;
-    margin-left: 24px;
+    /* margin-left: 24px; */
     align-items: center;
 `;
 
@@ -18,9 +17,7 @@ import { IoIosArrowForward } from "react-icons/io";
     padding-left: 1rem;
     padding-bottom: 5px;
     vertical-align: text-bottom;
-
     color: black;
-
 `;
 
  const Header = styled.button`
@@ -30,7 +27,7 @@ import { IoIosArrowForward } from "react-icons/io";
     width: 100%;
     height: 4rem;
     padding: 0 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: left;
     background: white;
     color: inherit;

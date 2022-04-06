@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  background: rgba(0,0,0,.1);
   height: 200px;
 `;
 
@@ -21,7 +20,7 @@ const Link = styled.a`
     width: 100%;
     height: 4px;
     border-radius: 4px;
-    background-color: rgba(20,50,200,.8);
+    background-color: rgba(138,43,226,1);
     bottom: 0;
     left: 0;
     transform-origin: right;
@@ -54,10 +53,13 @@ export const items = [
     name: "Women",
     content: <Container>
       <Item>
-        <Link href=''>a</Link>
+        <Link href=''>Tops</Link>
       </Item>
       <Item>
-        <Link href=''>a</Link>
+        <Link href=''>Bottom</Link>
+      </Item>
+      <Item>
+        <Link href=''>Footwear</Link>
       </Item>
     </Container>
   }

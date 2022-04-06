@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import bg_img from '../images/background.png'
 export const Container = styled.div`
     height: 650px;
     z-index: 1;
@@ -17,4 +17,15 @@ export const Container = styled.div`
         margin-right: 0%;
     }
 
-`
+`;
+
+export const Background = styled.div`
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(${bg_img});
+    background-color: #EFEBEA;
+`;
+
