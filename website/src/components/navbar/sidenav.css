@@ -23,6 +23,7 @@
     top: 0;
     left: -100%;
     transition: .85s;
+    backdrop-filter: blur(10px);
 }
 
 .nav-menu.active{
@@ -63,6 +64,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
 }
 
 span {
@@ -76,4 +78,13 @@ span {
 .close{
     height: 0;
     transition: .5s;
+}
+
+.icon-open{
+    transition: 1s;
+    transform: rotate(90deg);
+}
+.icon-close{
+    transition: .2s;
+    transform: rotate(0deg);
 }

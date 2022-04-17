@@ -19,29 +19,29 @@ export const Box = styled.div`
 
 export const LeftSection = styled.div`
     justify-content:center;
-
+    width:150px;
 `
 
 export const RightSection = styled.div`
     display:inline-block;
+    width:150px;
 
 `
 
 export const MiddleSection = styled.div`
     display:inline-block;
     align-items: center;
+    width:200px;
+
 `
 
 
 export const Header = styled.a`
     font-size: 0.75rem;
-    margin: 0 1rem;
-    font-family: proxima-nova, sans-serif;
     cursor: pointer;
     display: flex;
     position: relative;
     justify-content: center;
-    width: 125px;
     &:after{
         background: none repeat scroll 0 0 transparent;
         bottom: 0;

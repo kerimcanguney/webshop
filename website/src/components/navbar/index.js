@@ -96,7 +96,7 @@ function Navbar () {
   const showSidebar = () => setSidebar(!sidebar);
   return (
     <>
-    <Nav>
+    <Nav style={{fontFamily: "Lato"}}>
       <NavbarContainer>
         <IconContainer>
           <MenuIcon to='#' className={sidebar ? 'close' : 'open'}  onClick={showSidebar}/>
@@ -111,11 +111,11 @@ function Navbar () {
         </IconContainer>
       </NavbarContainer>
     </Nav>
-    <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+    <nav style={{zIndex:1}} className={sidebar ? 'nav-menu active' : 'nav-menu'}>
         <ul className='nav-menu-items'>
           <li className='navbar-toggle'>
             <Link to='#' className='menu-bars'>
-              <GrFormClose color='black' className={sidebar ? 'open' : 'close'}  onClick={showSidebar}/>
+              <GrFormClose className={sidebar ? 'icon-open' : 'icon-close'}  onClick={showSidebar}/>
             </Link>
           </li>
           <Items/>
