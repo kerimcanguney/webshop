@@ -6,7 +6,6 @@ import {RiShoppingBagLine} from 'react-icons/ri';
 import {AiOutlineSearch} from 'react-icons/ai';
 import { FaBars } from 'react-icons/fa'
 import {BsDot} from 'react-icons/bs';
-
 export const DotIcon = styled(BsDot)`
   background: transparent;
   font-size: inherit;

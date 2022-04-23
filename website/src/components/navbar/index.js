@@ -14,7 +14,7 @@ import {
 } from "./navbarstyle.js";
 import './sidenav.css'
 import {GrFormClose} from 'react-icons/gr';
-
+import Login from '../../pages/login';
 
 function GetCurrentDay(number){
   switch (number) {
@@ -106,7 +106,9 @@ function Navbar () {
           <LogoSmallText>{GetDateForText()}</LogoSmallText>
         </LogoContainer>
         <IconContainer>
-          <UserIcon/> 
+            <Link style={{color: "black"}} to={'/login'}>
+              <UserIcon/>
+            </Link>
           <DotIcon/>
         </IconContainer>
       </NavbarContainer>
@@ -119,7 +121,6 @@ function Navbar () {
             </Link>
           </li>
           <Items/>
-
         </ul>
       </nav>
     </>
