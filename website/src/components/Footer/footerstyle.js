@@ -7,7 +7,7 @@ export const Box = styled.div`
 	box-sizing: border-box;
 	margin: 0;
 	position: relative;
-	top: 400px;
+	top: 0px;
 `;
 
 export const Container = styled.div`

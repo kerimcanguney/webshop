@@ -11,7 +11,7 @@ const items = () => {
             </Slink>
         </li>
         <li style={{marginTop: "15px"}}>
-            <Slink to='/'>
+            <Slink to='/shop'>
                 <span style={{marginLeft: "70px"}}>NEW ARRIVALS <Arrow/> </span>
             </Slink>
         </li>

@@ -1,22 +1,22 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    background: gray;
-    width:  70vw;
-    height: 90%;
-    margin-right: 10vw;
+    width:  100vw;
+    height: 100vh;
+    margin-bottom:20px;
     flex: wrap;
-    display: flex;
-    justify-content: space-around;
+    
 `
-export const Card = styled.div`
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 225px;
-    height: 200px;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5%;
+
+
+export const ProductsContainer = styled.div`
+    display: grid;
+    width: 70%;
+    border: 1px solid black;
+    border-top: 0;
+    margin:auto;
+    row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    overflow-y: visible;
+    z-index: 1000;
 `

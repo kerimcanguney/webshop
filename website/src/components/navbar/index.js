@@ -11,6 +11,7 @@ import {
   LogoSmallText,
   LogoContainer,
   DotIcon,
+  ShoppingCartIcon,
 } from "./navbarstyle.js";
 import './sidenav.css'
 import {GrFormClose} from 'react-icons/gr';
@@ -90,9 +91,9 @@ function GetDateForText(){
   return fullstring;
 }
 
-function Navbar () {
-  const [sidebar, setSidebar] = useState(false);
+function Navbar ({logged}) {
 
+  const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
   return (
     <>
@@ -102,14 +103,18 @@ function Navbar () {
           <MenuIcon to='#' className={sidebar ? 'close' : 'open'}  onClick={showSidebar}/>
         </IconContainer>
         <LogoContainer>
-          <NavLogo>SneakerStock</NavLogo>
+          <NavLogo href='/'>Sneakerstock</NavLogo>
           <LogoSmallText>{GetDateForText()}</LogoSmallText>
         </LogoContainer>
         <IconContainer>
             <Link style={{color: "black"}} to={'/login'}>
               <UserIcon/>
             </Link>
-          <DotIcon/>
+          <DotIcon  logged={logged}/>
+            <Link style={{color: "black"}} to={'/checkout'}>
+              <ShoppingCartIcon/>
+            </Link>
+            <DotIcon  style={{display: 'none'}}/>
         </IconContainer>
       </NavbarContainer>
     </Nav>

@@ -10,8 +10,8 @@ export const DotIcon = styled(BsDot)`
   background: transparent;
   font-size: inherit;
   outline: none;
-  color: red;
   margin-bottom: 20px;
+  color: ${({logged}) => (logged ? 'blue' : 'red')};
 `;
 export const MenuIcon = styled(FaBars)`
   background: transparent;
@@ -48,7 +48,7 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+  position: relative;
   top: 0;
   @media screen and (max-width: 960px){
     transition: 0.8s all ease;
@@ -87,6 +87,7 @@ export const LogoContainer = styled.div`
   justify-items: center;
 `;
 export const IconContainer = styled.div`
+  width:100px;
   justify-content: space-evenly;
   align-items: center;
   display: flex;

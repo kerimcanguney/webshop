@@ -39,7 +39,7 @@ export const items = [
     name: "Men",
     content: <Container>
       <Item>
-        <Link href=''>Tops</Link>
+        <Link href='/'>Tops</Link>
       </Item>
       <Item>
         <Link href=''>Bottom</Link>
