@@ -9,7 +9,16 @@ const index = () => {
             <img src='https://via.placeholder.com/150' width={'85px'}/>
           </Td>
           <Td>
-            <h3>product name</h3>
+            <Wrapper>
+              <h3>product name</h3>
+              <p>size: 32</p>
+            </Wrapper>
+            
+          </Td>
+          <Td>
+          <select>
+              <option>1</option>
+            </select>
           </Td>
           <Td>
             <button>x</button>
@@ -23,6 +32,10 @@ const index = () => {
 const Tbody = styled.tbody`
   display:contents;
 `
+const Wrapper = styled.div`
+  display:grid;
+`
+
 const Td = styled.td`
   justify-content:center;
   align-items:center;

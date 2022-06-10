@@ -12,10 +12,34 @@ const index = () => {
                 <Cartproduct/>
             </Form>
         </Card>
+
+        <Checkout>
+            checkout
+        </Checkout>
     </>
   )
 }
 
+const Checkout = styled.button`
+    margin:auto;
+    margin-top:20px;
+    display:flex;
+    width: fit-content;
+    font-weight:bold;
+    padding: 10px 223px 10px 223px;
+    border:none;
+    background: black;
+    color:white;
+    transition: .2s;
+    cursor:pointer;
+    &:hover{
+        color:lightgray;
+    }
+    &:active{
+        color: darkslategrey;
+        background:lightgray;
+    }
+`
 
 const Card = styled.div`
     width:500px;
@@ -44,6 +68,7 @@ const Form = styled.table`
     grid-template-columns: 
         minmax(150px, 1fr)
         minmax(150px, 1.67fr)
-        minmax(150px, 1.67fr);
+        minmax(0px, 1.67fr)
+        minmax(0px, 1.67fr);
 `
 export default index
