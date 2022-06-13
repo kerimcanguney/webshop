@@ -5,9 +5,9 @@ import Navbar from '../components/navbar/index';
 import Footer from '../components/Footer/index'
 export default function Product(){
     const { id } = useParams();
-    console.log(id)
 
     const [product,setProduct] = useState();
+    const [currentSize, setSize] = useState();
     useEffect(() =>{
         // fetch(`http://localhost:3001/products/${id}`)
         fetch(`http://localhost:3001/products/${id}`)
@@ -27,7 +27,7 @@ export default function Product(){
             <>
                 <Navbar />
                 <Container>
-                    <Img src='https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ebad848a-13b1-46d5-a85e-49b4b6a4953c/air-force-1-le-older-shoe-D59pRJ.png'/>
+                    <Img src={product.imgUrl}/>
                     <TextWrapper>
                         <Header>{product.Name}</Header>
                             <DescriptionWrapper>
@@ -35,12 +35,21 @@ export default function Product(){
                             </DescriptionWrapper>
                         <BottomWrapper >
                             <label style={{margin: 'auto'}}>EU sizes</label>
-                            <select style={{margin: 'auto'}}>
-                                <option>43</option>
-                                <option>42</option>
-                                <option>41</option>
+                            <select style={{margin: 'auto'}} onChange={(e) => setSize(e.target.value)}>
+                                <option disabled selected value> -- select shoe size -- </option>
+                                {
+                                    product.sizes.map((size) =>{
+                                        if (size.stock > 0){
+                                            return (<option>{size.size}</option>)
+                                        }
+                                        else{
+                                            return (<option disabled>{size.size}</option>)
+                                        }
+                                        }
+                                    )
+                                }
                             </select>
-                            <Button>Add to cart</Button>
+                            <Button onClick={() => addToCart(id,currentSize)}>Add to cart</Button>
                         </BottomWrapper>
                     </TextWrapper>
                 </Container>
@@ -49,6 +58,18 @@ export default function Product(){
         }
         </>
     );
+}
+
+function addToCart(id,size){
+    if (size == null) return;
+
+    var product = JSON.stringify({
+        id: id,
+        size: size,
+        amount: 1
+    })
+    window.localStorage.setItem("product",product)
+    
 }
 
 const Container = styled.div`

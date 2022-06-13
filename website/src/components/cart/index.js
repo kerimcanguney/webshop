@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Cartproduct from '../cartproduct/index'
-const index = () => {
+const index = ({imgUrl}) => {
   return (
     <>
         <Card>
@@ -9,7 +9,10 @@ const index = () => {
                 <Header>Shopping Cart</Header>
             </HeaderWrapper>
             <Form>
-                <Cartproduct/>
+                { imgUrl ?
+                    <Cartproduct imgUrl={imgUrl}/>
+                    : null
+                }
             </Form>
         </Card>
 

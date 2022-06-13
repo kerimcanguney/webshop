@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-const index = () => {
+const index = ({imgUrl}) => {
   return (
     <>
       <tbody style={{display: 'contents'}}>
         <Tr style={{display: 'contents'}}>
           <Td>
-            <img src='https://via.placeholder.com/150' width={'85px'}/>
+            <img src= {imgUrl} width={'85px'}/>
           </Td>
           <Td>
             <Wrapper>
@@ -15,19 +15,23 @@ const index = () => {
             </Wrapper>
             
           </Td>
-          <Td>
+          {/* <Td>
           <select>
               <option>1</option>
-            </select>
-          </Td>
+          </select>
+          </Td> */}
           <Td>
-            <button>x</button>
+            <button onClick={()=> removeProduct()}>x</button>
           </Td>
         </Tr>
       </tbody>
 
     </>
   )
+}
+function removeProduct(){
+  window.localStorage.removeItem("product")
+  window.location.reload();
 }
 const Tbody = styled.tbody`
   display:contents;
