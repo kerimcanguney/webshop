@@ -1,0 +1,9 @@
+*{
+    margin: auto;
+    overflow-y: auto;
+}
+
+a,
+form{
+    overflow-y: hidden;
+}
