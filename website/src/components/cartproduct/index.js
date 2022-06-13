@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-const index = ({imgUrl}) => {
+const index = ({imgUrl, Size}) => {
   return (
     <>
       <tbody style={{display: 'contents'}}>
@@ -11,7 +11,7 @@ const index = ({imgUrl}) => {
           <Td>
             <Wrapper>
               <h3>product name</h3>
-              <p>size: 32</p>
+              <p>size: {Size}</p>
             </Wrapper>
             
           </Td>
