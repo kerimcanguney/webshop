@@ -20,11 +20,10 @@ export default function ItemContainer () {
     <Container>
       <FilterBar/>
       <ProductsContainer className='overview' id='overview' >
-      <Card title={'Nike AF1'}/>
       { products &&
-        products.map(item=>{
-          (<Card title={item.name}/>)
-        })
+        products.map((item, index)=>
+          (<Card key={index} item={item}/>)
+        )
       }
       </ProductsContainer>
     </Container>

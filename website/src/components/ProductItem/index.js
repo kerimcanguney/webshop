@@ -1,19 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import {FaShoppingBag} from 'react-icons/fa'
-const index = ({title}) => {
+import { Link } from 'react-router-dom'
+const index = ({item}) => {
   return (
-    <Card>
-        <img  
-        src='https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ebad848a-13b1-46d5-a85e-49b4b6a4953c/air-force-1-le-kinderschoen-D59pRJ.png'
-        width={"100%"}
-        height={'85%'}
-        />
-        <TextContainer>
-        <Title>{title}</Title>
-        <Button/>
-        </TextContainer>
-    </Card>
+    <Link to={'/product/'+item._id} style={{textDecoration: 'none', color: 'black'}}>
+        <Card>
+            <img  
+            src={item.imgUrl}
+            width={"100%"}
+            height={'85%'}
+            />
+            <TextContainer>
+            <Title>{item.name}</Title>
+            </TextContainer>
+        </Card>
+    </Link>
   )
 }
 
@@ -26,7 +28,8 @@ export const Card = styled.form`
     text-align: center;
     &:hover{
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    }
+    };
+    cursor: pointer;
     
 `;
 
