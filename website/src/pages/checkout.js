@@ -18,14 +18,14 @@ const Checkout = () => {
     return (
       <>
         <Navbar/>
-          <Cart imgUrl={imgUrl} Size={Size}/>
+        <Cart imgUrl={imgUrl} Size={Size}/>
       </>
     )
   }else{
     return(
       <>
         <Navbar/>
-          <Cart />
+        <Cart />
       </>
     )
   }

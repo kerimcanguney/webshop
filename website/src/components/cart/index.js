@@ -16,13 +16,33 @@ const index = ({imgUrl,Size}) => {
             </Form>
         </Card>
 
-        <Checkout>
+        <Checkout onClick={() => checkavailability()}>
             checkout
         </Checkout>
     </>
   )
 }
+function checkavailability(){
+    var item = JSON.parse(window.localStorage.getItem("product"))
+    if (item == null) return null;
 
+    const res = fetch('http://localhost:3001/products/' + item.id)
+    .then(response => response.json())
+    .then(data => {
+        var sizes = data.sizes
+        for (let index = 0; index < sizes.length; index++) {
+            if (sizes[index].size == item.size && sizes[index].stock >= 1){
+                return console.log("instock")
+            }
+        }
+        return removeProductFromCart()
+    })
+}
+
+function removeProductFromCart(){
+    window.localStorage.removeItem('product')
+    window.location.reload()
+}
 const Checkout = styled.button`
     margin:auto;
     margin-top:20px;
